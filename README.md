@@ -6,6 +6,20 @@
 - Missing plugins
 - Very new but promissing
 
+```
+./go-wrk -c 800 -d 5  http://localhost:3000/user/1
+Running 5s test @ http://localhost:3000/user/1
+  800 goroutine(s) running concurrently
+19037 requests in 5.030289304s, 2.67MB read
+Requests/sec:           3784.47
+Transfer/sec:           543.28KB
+Avg Req Time:           211.39ms
+Fastest Request:        23.0412ms
+Slowest Request:        2.0377374s
+Number of Errors:       0
+
+```
+
 ## RESTIFY
 
 - Responce 28-30 ms on chrome local
@@ -15,6 +29,20 @@
 - plugin set up can be tricky
 - Not so good documentation needs update
 - Express syntax
+
+```
+./go-wrk -c 800 -d 5  http://localhost:3000/user/1
+Running 5s test @ http://localhost:3000/user/1
+  800 goroutine(s) running concurrently
+88470 requests in 5.021216959s, 11.73MB read
+Requests/sec:           17619.23
+Transfer/sec:           2.34MB
+Avg Req Time:           45.404923ms
+Fastest Request:        1.0023ms
+Slowest Request:        1.1947739s
+Number of Errors:       0
+
+```
 
 ## POLKA
 

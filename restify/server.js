@@ -60,6 +60,15 @@ server.get('/error', (req, res, next) => {
 	return next(new errors.ConflictError("I just don't like you"));
 });
 
+server.get('/user/:id', (req, res, next) => {
+	// var err = new errors.NotFoundError({
+	// 	cause: 'aha',
+	// 	info: { foo: 'bar' },
+	// });
+
+	res.send(`user ${req.params.id}`);
+});
+
 // verssioned api
 server.get(
 	'/version/test',
@@ -88,6 +97,6 @@ server.get(
 	}),
 );
 
-server.listen(5050, function() {
+server.listen(3000, function() {
 	console.log('%s listening at %s', server.name, server.url);
 });
