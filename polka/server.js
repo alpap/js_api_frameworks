@@ -11,6 +11,11 @@ function two(req, res, next) {
 	next();
 }
 
+async function logger(req, res, next) {
+	console.log(`~> Received ${req.method} on ${req.url}`);
+	next(); // move on
+}
+
 // simple token auth
 // async function authenticate(req, res, next) {
 // 	let token = req.headers['authorization'];
@@ -19,19 +24,40 @@ function two(req, res, next) {
 // 	next(); // done, woot!
 // }
 
-app.use(one, two);
+// better auth
+// function authorize(req, res, next) {
+// 	// mutate req; available later
+// 	req.token = req.headers['authorization'];
+// 	req.token ? next() : ((res.statusCode = 401) && res.end('No token!'));
+// }
 
-app.get('/users/:id', async (req, res) => {
-	console.log(`~> Hello, ${req.foo}`);
-	res.end(`User: ${req.params.id}`);
-});
+// middleware
+app.use(one, two, logger);
 
-app.get('/users/:id/books/:title', async (req, res) => {
-	let { id, title } = req.params;
-	res.end(`User: ${id}  Book: ${title}`);
-});
+// routes
+app
+	.get('/users/:id', async (req, res) => {
+		console.log(`~> Hello, ${req.foo}`);
+		res.end(`User: ${req.params.id}`);
+	})
+	.get('/users/:id/books/:title', async (req, res) => {
+		let { id, title } = req.params;
+		res.end(`User: ${id}  Book: ${title}`);
+	});
 
-app.listen(4000, err => {
+app.listen(3000, err => {
 	if (err) throw err;
 	console.log(`> Running on localhost:3000`);
 });
+
+// example polka tagets specific routes it doesnt itterate through all of them
+// Polka()
+// 	.get('/', get)
+// 	.use(foo)
+// 	.get('/users/123', user)
+// 	.use('/users', users)
+
+// errors from midlleware are passed using next
+// polka()
+// 	.use((req, res, next) => next('💩'))
+// 	.get('*', (req, res) => res.end('wont run'));

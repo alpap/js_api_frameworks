@@ -2,8 +2,6 @@
 
 ## RAYO
 
-Seems promissing but it is in its early stages not something that is completely build for rapid development meaning no plugins but seeing the developers time it seems amazing. It emphisizes not only on the API and the Compression, but also on the scaling.
-
 - Responce 26-34 ms on chrome local
 - Missing plugins
 - Very new but promissing
@@ -25,3 +23,39 @@ Seems promissing but it is in its early stages not something that is completely 
 - Express syntax
 - Very simple to start with
 - Clean syntax
+- freely use any middleware from express
+
+```
+./go-wrk -c 800 -d 5  http://localhost:3000/users/1D
+
+12505 requests in 3.465680456s, 1.06MB read
+Requests/sec:           3608.24
+Transfer/sec:           313.61KB
+Avg Req Time:           221.714863ms
+Fastest Request:        4.9959ms
+Slowest Request:        2.6949984s
+Number of Errors:       782
+
+```
+
+## MICRO
+
+- Opinionated
+- Nothing out of the box
+- Non newbie
+- Plugins
+- Fast
+
+```
+$ ./go-wrk -c 800 -d 5  http://localhost:3000/
+Running 5s test @ http://localhost:3000/
+  800 goroutine(s) running concurrently
+77922 requests in 5.021318113s, 12.04MB read
+Requests/sec:           15518.24
+Transfer/sec:           2.40MB
+Avg Req Time:           51.55225ms
+Fastest Request:        998.6µs
+Slowest Request:        1.3375186s
+Number of Errors:       0
+
+```
