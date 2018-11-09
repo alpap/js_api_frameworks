@@ -1,8 +1,9 @@
 var restify = require('restify');
+var errors = require('restify-errors');
 var server = restify.createServer();
 
 // before routing
-// server.pre(restify.plugins.cpuUsageThrottle());
+// server.pre(restify.plugins.sanitizePath());
 
 //returned for all routes
 // server.use(function(req, res, next) {
@@ -52,11 +53,11 @@ server.get('/', function(req, res, next) {
 
 // errors
 server.get('/error', (req, res, next) => {
-	var err = new errors.NotFoundError({
-		cause: 'aha',
-		info: { foo: 'bar' },
-	});
-	return next(err);
+	// var err = new errors.NotFoundError({
+	// 	cause: 'aha',
+	// 	info: { foo: 'bar' },
+	// });
+	return next(new errors.ConflictError("I just don't like you"));
 });
 
 // verssioned api
@@ -74,6 +75,17 @@ server.get(
 			},
 		},
 	]),
+);
+
+//static localhost:5050/docs/info.json
+
+server.get(
+	'/docs/*',
+	restify.plugins.serveStatic({
+		directory: './html',
+		default: 'index.html',
+		appendRequestPath: false,
+	}),
 );
 
 server.listen(5050, function() {

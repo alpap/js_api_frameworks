@@ -14,3 +14,4 @@ Seems promissing but it is in its early stages not something that is completely 
 - Good community
 - Good support
 - Plugins for rapid development
+- Not so good documentation needs update

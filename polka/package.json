@@ -1,0 +1,9 @@
+{
+  "name": "polka",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "polka": "^0.5.1"
+  }
+}
