@@ -1,0 +1,10 @@
+{
+  "name": "rayo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@rayo/compress": "^1.1.9",
+    "rayo": "^1.2.5"
+  }
+}
