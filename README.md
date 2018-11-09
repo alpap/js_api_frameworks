@@ -47,15 +47,15 @@ Number of Errors:       782
 - Fast
 
 ```
-$ ./go-wrk -c 800 -d 5  http://localhost:3000/
-Running 5s test @ http://localhost:3000/
-  800 goroutine(s) running concurrently
-77922 requests in 5.021318113s, 12.04MB read
-Requests/sec:           15518.24
-Transfer/sec:           2.40MB
-Avg Req Time:           51.55225ms
-Fastest Request:        998.6µs
-Slowest Request:        1.3375186s
-Number of Errors:       0
+./go-wrk -c 800 -d 5  http://localhost:3000/user/1
 
+Running 5s test @ http://localhost:3000/user/1
+  800 goroutine(s) running concurrently
+75393 requests in 5.02029441s, 6.40MB read
+Requests/sec:           15017.65
+Transfer/sec:           1.27MB
+Avg Req Time:           53.270668ms
+Fastest Request:        0s
+Slowest Request:        1.4349981s
+Number of Errors:       0
 ```

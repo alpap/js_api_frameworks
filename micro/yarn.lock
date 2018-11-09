@@ -594,6 +594,10 @@ extsprintf@^1.2.0:
   version "1.4.0"
   resolved "https://proget.hesehus.dk/npm/npm/extsprintf/-/extsprintf-1.4.0.tgz#e2689f8f356fad62cca65a3a91c5df5f9551692f"
 
+fast-decode-uri-component@^1.0.0:
+  version "1.0.0"
+  resolved "https://proget.hesehus.dk/npm/npm/fast-decode-uri-component/-/fast-decode-uri-component-1.0.0.tgz#7ce10336aa4b26286fee93d71e6785ff0f596a33"
+
 fast-deep-equal@^2.0.1:
   version "2.0.1"
   resolved "https://proget.hesehus.dk/npm/npm/fast-deep-equal/-/fast-deep-equal-2.0.1.tgz#7b05218ddf9667bf7f370bf7fdb2cb15fdd0aa49"
@@ -619,6 +623,14 @@ file-entry-cache@^2.0.0:
   dependencies:
     flat-cache "^1.2.1"
     object-assign "^4.0.1"
+
+find-my-way@^1.15.1:
+  version "1.15.4"
+  resolved "https://proget.hesehus.dk/npm/npm/find-my-way/-/find-my-way-1.15.4.tgz#3b1da909347022e0b5ed94ecaaabf6d99096edd6"
+  dependencies:
+    fast-decode-uri-component "^1.0.0"
+    safe-regex "^1.1.0"
+    semver-store "^0.3.0"
 
 find-root@^1.0.0:
   version "1.1.0"
@@ -1012,6 +1024,12 @@ micro-api@^0.2.0:
     request-promise "^4.2.0"
     standard "^10.0.0"
 
+micro-fork@^0.1.1:
+  version "0.1.1"
+  resolved "https://proget.hesehus.dk/npm/npm/micro-fork/-/micro-fork-0.1.1.tgz#6a70745d615d061d78e3258a71cb6f3710a9d187"
+  dependencies:
+    find-my-way "^1.15.1"
+
 micro@^9.3.3:
   version "9.3.3"
   resolved "https://proget.hesehus.dk/npm/npm/micro/-/micro-9.3.3.tgz#32728c7be15e807691ead85da27fd8117a8bca24"
@@ -1368,6 +1386,10 @@ restore-cursor@^1.0.1:
     exit-hook "^1.0.0"
     onetime "^1.0.0"
 
+ret@~0.1.10:
+  version "0.1.15"
+  resolved "https://proget.hesehus.dk/npm/npm/ret/-/ret-0.1.15.tgz#b8a4825d5bdb1fc3f6f53c2bc33f81388681c7bc"
+
 rimraf@^2.2.8:
   version "2.6.2"
   resolved "https://proget.hesehus.dk/npm/npm/rimraf/-/rimraf-2.6.2.tgz#2ed8150d24a16ea8651e6d6ef0f47c4158ce7a36"
@@ -1392,9 +1414,19 @@ safe-buffer@^5.0.1, safe-buffer@^5.1.2, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   version "5.1.2"
   resolved "https://proget.hesehus.dk/npm/npm/safe-buffer/-/safe-buffer-5.1.2.tgz#991ec69d296e0313747d59bdfd2b745c35f8828d"
 
+safe-regex@^1.1.0:
+  version "1.1.0"
+  resolved "https://proget.hesehus.dk/npm/npm/safe-regex/-/safe-regex-1.1.0.tgz#40a3669f3b077d1e943d44629e157dd48023bf2e"
+  dependencies:
+    ret "~0.1.10"
+
 safer-buffer@^2.0.2, safer-buffer@^2.1.0, safer-buffer@~2.1.0:
   version "2.1.2"
   resolved "https://proget.hesehus.dk/npm/npm/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
+
+semver-store@^0.3.0:
+  version "0.3.0"
+  resolved "https://proget.hesehus.dk/npm/npm/semver-store/-/semver-store-0.3.0.tgz#ce602ff07df37080ec9f4fb40b29576547befbe9"
 
 semver@5.3.0:
   version "5.3.0"

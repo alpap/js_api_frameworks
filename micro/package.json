@@ -1,13 +1,14 @@
 {
 	"name": "micro",
 	"version": "1.0.0",
-	"main": "index.js",
+	"main": "insed.js",
 	"scripts": {
-		"start": "micro"
+		"start": "./node_modules/micro/bin/micro.js index.js"
 	},
 	"license": "MIT",
 	"dependencies": {
 		"micro": "^9.3.3",
-		"micro-api": "^0.2.0"
+		"micro-api": "^0.2.0",
+		"micro-fork": "^0.1.1"
 	}
 }
