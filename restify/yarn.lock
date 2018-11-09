@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+asn1@0.1.11:
+  version "0.1.11"
+  resolved "https://proget.hesehus.dk/npm/npm/asn1/-/asn1-0.1.11.tgz#559be18376d08a4ec4dbe80877d27818639b2df7"
+
 asn1@~0.2.3:
   version "0.2.4"
   resolved "https://proget.hesehus.dk/npm/npm/asn1/-/asn1-0.2.4.tgz#8d2475dfab553bb33e77b54e59e880bb8ce23136"
@@ -11,6 +15,10 @@ asn1@~0.2.3:
 assert-plus@1.0.0, assert-plus@^1.0.0:
   version "1.0.0"
   resolved "https://proget.hesehus.dk/npm/npm/assert-plus/-/assert-plus-1.0.0.tgz#f12e0f3c5d77b0b1cdd9146942e4e96c1e4dd525"
+
+assert-plus@^0.1.5:
+  version "0.1.5"
+  resolved "https://proget.hesehus.dk/npm/npm/assert-plus/-/assert-plus-0.1.5.tgz#ee74009413002d84cec7219c6ac811812e723160"
 
 balanced-match@^1.0.0:
   version "1.0.0"
@@ -29,7 +37,7 @@ brace-expansion@^1.1.7:
     balanced-match "^1.0.0"
     concat-map "0.0.1"
 
-bunyan@^1.8.12:
+bunyan@^1.8.0, bunyan@^1.8.12:
   version "1.8.12"
   resolved "https://proget.hesehus.dk/npm/npm/bunyan/-/bunyan-1.8.12.tgz#f150f0f6748abdd72aeae84f04403be2ef113797"
   optionalDependencies:
@@ -60,7 +68,7 @@ csv-stringify@^1.1.2:
   dependencies:
     lodash.get "~4.4.2"
 
-csv@^1.1.1:
+csv@^1.1.0, csv@^1.1.1:
   version "1.2.1"
   resolved "https://proget.hesehus.dk/npm/npm/csv/-/csv-1.2.1.tgz#5231edfc1c7152512ec45781076a7a97ff525c0c"
   dependencies:
@@ -68,6 +76,10 @@ csv@^1.1.1:
     csv-parse "^1.3.3"
     csv-stringify "^1.1.2"
     stream-transform "^0.2.2"
+
+ctype@0.5.3:
+  version "0.5.3"
+  resolved "https://proget.hesehus.dk/npm/npm/ctype/-/ctype-0.5.3.tgz#82c18c2461f74114ef16c135224ad0b9144ca12f"
 
 dashdash@^1.12.0:
   version "1.14.1"
@@ -132,7 +144,7 @@ find-my-way@^1.13.0:
     safe-regex "^1.1.0"
     semver-store "^0.3.0"
 
-formidable@^1.2.1:
+formidable@^1.0.17, formidable@^1.2.1:
   version "1.2.1"
   resolved "https://proget.hesehus.dk/npm/npm/formidable/-/formidable-1.2.1.tgz#70fb7ca0290ee6ff961090415f4b3df3d2082659"
 
@@ -168,6 +180,14 @@ hpack.js@^2.1.6:
 http-deceiver@^1.2.7:
   version "1.2.7"
   resolved "https://proget.hesehus.dk/npm/npm/http-deceiver/-/http-deceiver-1.2.7.tgz#fa7168944ab9a519d337cb0bec7284dc3e723d87"
+
+http-signature@^0.11.0:
+  version "0.11.0"
+  resolved "https://proget.hesehus.dk/npm/npm/http-signature/-/http-signature-0.11.0.tgz#1796cf67a001ad5cd6849dca0991485f09089fe6"
+  dependencies:
+    asn1 "0.1.11"
+    assert-plus "^0.1.5"
+    ctype "0.5.3"
 
 http-signature@^1.2.0:
   version "1.2.0"
@@ -213,18 +233,18 @@ lodash.get@~4.4.2:
   version "4.4.2"
   resolved "https://proget.hesehus.dk/npm/npm/lodash.get/-/lodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
 
-lodash@^4.17.10, lodash@^4.2.1:
+lodash@^4.17.10, lodash@^4.17.4, lodash@^4.2.1:
   version "4.17.11"
   resolved "https://proget.hesehus.dk/npm/npm/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
 
-lru-cache@^4.1.3:
+lru-cache@^4.0.1, lru-cache@^4.1.3:
   version "4.1.3"
   resolved "https://proget.hesehus.dk/npm/npm/lru-cache/-/lru-cache-4.1.3.tgz#a1175cf3496dfc8436c156c334b4955992bce69c"
   dependencies:
     pseudomap "^1.0.2"
     yallist "^2.1.2"
 
-mime@^1.5.0:
+mime@^1.3.4, mime@^1.5.0:
   version "1.6.0"
   resolved "https://proget.hesehus.dk/npm/npm/mime/-/mime-1.6.0.tgz#32cd9e5c64553bd58d19a568af452acff04981b1"
 
@@ -280,7 +300,7 @@ obuf@^1.0.0, obuf@^1.1.1:
   version "1.1.2"
   resolved "https://proget.hesehus.dk/npm/npm/obuf/-/obuf-1.1.2.tgz#09bea3343d41859ebd446292d11c9d4db619084e"
 
-once@^1.3.0, once@^1.4.0:
+once@^1.3.0, once@^1.3.2, once@^1.4.0:
   version "1.4.0"
   resolved "https://proget.hesehus.dk/npm/npm/once/-/once-1.4.0.tgz#583b1aa775961d4b113ac17d9c50baef9dd76bd1"
   dependencies:
@@ -302,7 +322,7 @@ pseudomap@^1.0.2:
   version "1.0.2"
   resolved "https://proget.hesehus.dk/npm/npm/pseudomap/-/pseudomap-1.0.2.tgz#f052a28da70e618917ef0a8ac34c1ae5a68286b3"
 
-qs@^6.5.2:
+qs@^6.2.1, qs@^6.5.2:
   version "6.5.2"
   resolved "https://proget.hesehus.dk/npm/npm/qs/-/qs-6.5.2.tgz#cb3ae806e8740444584ef154ce8ee98d403f3e36"
 
@@ -318,6 +338,16 @@ readable-stream@^2.0.1, readable-stream@^2.2.9:
     string_decoder "~1.1.1"
     util-deprecate "~1.0.1"
 
+restify-errors@^4.2.3:
+  version "4.3.0"
+  resolved "https://proget.hesehus.dk/npm/npm/restify-errors/-/restify-errors-4.3.0.tgz#ec90f30934d7f3119135181dfc303e30be601abe"
+  dependencies:
+    assert-plus "^1.0.0"
+    lodash "^4.2.1"
+    verror "^1.8.1"
+  optionalDependencies:
+    safe-json-stringify "^1.0.3"
+
 restify-errors@^5.0.0:
   version "5.0.0"
   resolved "https://proget.hesehus.dk/npm/npm/restify-errors/-/restify-errors-5.0.0.tgz#668717e100683eec6ce0d515f89ff1dbec254a8d"
@@ -327,6 +357,33 @@ restify-errors@^5.0.0:
     verror "^1.8.1"
   optionalDependencies:
     safe-json-stringify "^1.0.3"
+
+restify-errors@^6.1.1:
+  version "6.1.1"
+  resolved "https://proget.hesehus.dk/npm/npm/restify-errors/-/restify-errors-6.1.1.tgz#a39bd00c1902c2e19f3030f6aeb9271f6c1b31f2"
+  dependencies:
+    assert-plus "^1.0.0"
+    lodash "^4.17.4"
+    verror "^1.10.0"
+  optionalDependencies:
+    safe-json-stringify "^1.0.4"
+
+restify-plugins@^1.6.0:
+  version "1.6.0"
+  resolved "https://proget.hesehus.dk/npm/npm/restify-plugins/-/restify-plugins-1.6.0.tgz#79e118887b7f0eb02e645780f9c5680cb7ab9aa9"
+  dependencies:
+    assert-plus "^1.0.0"
+    bunyan "^1.8.0"
+    csv "^1.1.0"
+    escape-regexp-component "^1.0.2"
+    formidable "^1.0.17"
+    http-signature "^0.11.0"
+    lru-cache "^4.0.1"
+    mime "^1.3.4"
+    once "^1.3.2"
+    qs "^6.2.1"
+    restify-errors "^4.2.3"
+    vasync "^1.6.3"
 
 restify@^7.2.2:
   version "7.2.2"
@@ -370,7 +427,7 @@ safe-buffer@^5.0.1, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   version "5.1.2"
   resolved "https://proget.hesehus.dk/npm/npm/safe-buffer/-/safe-buffer-5.1.2.tgz#991ec69d296e0313747d59bdfd2b745c35f8828d"
 
-safe-json-stringify@^1.0.3, safe-json-stringify@~1:
+safe-json-stringify@^1.0.3, safe-json-stringify@^1.0.4, safe-json-stringify@~1:
   version "1.2.0"
   resolved "https://proget.hesehus.dk/npm/npm/safe-json-stringify/-/safe-json-stringify-1.2.0.tgz#356e44bc98f1f93ce45df14bcd7c01cda86e0afd"
 
@@ -455,7 +512,7 @@ uuid@^3.1.0:
   version "3.3.2"
   resolved "https://proget.hesehus.dk/npm/npm/uuid/-/uuid-3.3.2.tgz#1b4af4955eb3077c501c23872fc6513811587131"
 
-vasync@^1.6.4:
+vasync@^1.6.3, vasync@^1.6.4:
   version "1.6.4"
   resolved "https://proget.hesehus.dk/npm/npm/vasync/-/vasync-1.6.4.tgz#dfe93616ad0e7ae801b332a9d88bfc5cdc8e1d1f"
   dependencies:

@@ -1,5 +1,4 @@
 var restify = require('restify');
-
 var server = restify.createServer();
 
 // before routing
@@ -39,16 +38,42 @@ server.get('/', function(req, res, next) {
 });
 
 // using next steps
-server.post(
-	'/foo',
-	function(req, res, next) {
-		req.someData = 'foo';
-		return next();
-	},
-	function(req, res, next) {
-		res.send(req.someData);
-		return next();
-	},
+// server.post(
+// 	'/foo',
+// 	function(req, res, next) {
+// 		req.someData = 'foo';
+// 		return next();
+// 	},
+// 	function(req, res, next) {
+// 		res.send(req.someData);
+// 		return next();
+// 	},
+// );
+
+// errors
+server.get('/error', (req, res, next) => {
+	var err = new errors.NotFoundError({
+		cause: 'aha',
+		info: { foo: 'bar' },
+	});
+	return next(err);
+});
+
+// verssioned api
+server.get(
+	'/version/test',
+	restify.plugins.conditionalHandler([
+		{
+			version: ['2.0.0', '2.1.0', '2.2.0'],
+			handler: function(req, res, next) {
+				res.send(200, {
+					requestedVersion: req.version(),
+					matchedVersion: req.matchedVersion(),
+				});
+				return next();
+			},
+		},
+	]),
 );
 
 server.listen(5050, function() {
