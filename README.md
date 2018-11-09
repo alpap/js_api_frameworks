@@ -18,8 +18,10 @@ Seems promissing but it is in its early stages not something that is completely 
 - Not so good documentation needs update
 - Express syntax
 
-##
+## POLKA
 
 - Responce 31-36 ms on chrome local
 - New and promissing
 - Express syntax
+- Very simple to start with
+- Clean syntax
