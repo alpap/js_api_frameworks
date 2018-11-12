@@ -87,3 +87,57 @@ Fastest Request:        0s
 Slowest Request:        1.4349981s
 Number of Errors:       0
 ```
+
+
+
+## RESTANA
+
+- Very new 
+- express based 
+- took the best from frameworks and combined them
+
+```
+go-wrk -c 800 -d 5  http://localhost:3000/user/1
+Running 5s test @ http://localhost:3000/user/1
+  800 goroutine(s) running concurrently
+115951 requests in 5.011511577s, 13.49MB read
+Requests/sec:           23136.93
+Transfer/sec:           2.69MB
+Avg Req Time:           34.576754ms
+Fastest Request:        16.9988ms
+Slowest Request:        1.1615233s
+Number of Errors:       0
+```
+
+with turbo http
+
+```
+go-wrk -c 800 -d 5  http://localhost:3000/user/1
+Running 5s test @ http://localhost:3000/user/1
+  800 goroutine(s) running concurrently
+115481 requests in 5.012806049s, 9.36MB read
+Requests/sec:           23037.20
+Transfer/sec:           1.87MB
+Avg Req Time:           34.726447ms
+Fastest Request:        3.9987ms
+Slowest Request:        2.2587918s
+Number of Errors:       0
+
+
+```
+
+35 sec test
+
+```
+go-wrk -c 800 -d 35  http://localhost:3000/user/1
+Running 35s test @ http://localhost:3000/user/1
+  800 goroutine(s) running concurrently
+1069198 requests in 35.006962452s, 86.67MB read
+Requests/sec:           30542.44
+Transfer/sec:           2.48MB
+Avg Req Time:           26.193062ms
+Fastest Request:        0s
+Slowest Request:        2.1793265s
+Number of Errors:       0
+
+```
