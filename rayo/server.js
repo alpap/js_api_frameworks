@@ -17,11 +17,14 @@ const compress = require('@rayo/compress');
 rayo({ port: 3000 })
 	.through(compress())
 	// .get('/hello/:user', age, name, (req, res) => {
+	// .get('/user/:id', (req, res) => {
+	// 	res.setHeader('content-type', 'text/html');
+	// 	res.end(`{
+	// 		age: ${req.params.id},
+	// 		name: req.name,
+	// 	}`);
+	// })
 	.get('/user/:id', (req, res) => {
-		res.setHeader('content-type', 'text/html');
-		res.end(`{
-			age: ${req.params.id},
-			name: req.name,
-		}`);
+		res.end(`hello: ${req.params.id}`);
 	})
 	.start();

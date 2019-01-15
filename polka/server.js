@@ -32,18 +32,17 @@ async function logger(req, res, next) {
 // }
 
 // middleware
-app.use(one, two, logger);
+// app.use(one, two, logger);
 
 // routes
 app
-	.get('/users/:id', async (req, res) => {
-		console.log(`~> Hello, ${req.foo}`);
+	.get('/user/:id', async (req, res) => {
 		res.end(`User: ${req.params.id}`);
 	})
-	.get('/users/:id/books/:title', async (req, res) => {
-		let { id, title } = req.params;
-		res.end(`User: ${id}  Book: ${title}`);
-	});
+	// .get('/users/:id/books/:title', async (req, res) => {
+	// 	let { id, title } = req.params;
+	// 	res.end(`User: ${id}  Book: ${title}`);
+	// });
 
 app.listen(3000, err => {
 	if (err) throw err;

@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "restana": "^2.3.0",
+    "restana": "^2.7.0",
     "turbo-http": "^0.3.0"
   }
 }

@@ -7,17 +7,16 @@
 - Very new but promissing
 
 ```
-./go-wrk -c 800 -d 5  http://localhost:3000/user/1
-Running 5s test @ http://localhost:3000/user/1
-  800 goroutine(s) running concurrently
-19037 requests in 5.030289304s, 2.67MB read
-Requests/sec:           3784.47
-Transfer/sec:           543.28KB
-Avg Req Time:           211.39ms
-Fastest Request:        23.0412ms
-Slowest Request:        2.0377374s
+./go-wrk -c 80 -d 10  http://localhost:3000/user/1
+Running 10s test @ http://localhost:3000/user/1
+  80 goroutine(s) running concurrently
+81969 requests in 9.99890777s, 7.04MB read
+Requests/sec:           8197.80
+Transfer/sec:           720.51KB
+Avg Req Time:           9.758721ms
+Fastest Request:        0s
+Slowest Request:        65.0685ms
 Number of Errors:       0
-
 ```
 
 ## RESTIFY
@@ -31,15 +30,15 @@ Number of Errors:       0
 - Express syntax
 
 ```
-./go-wrk -c 800 -d 5  http://localhost:3000/user/1
-Running 5s test @ http://localhost:3000/user/1
-  800 goroutine(s) running concurrently
-88470 requests in 5.021216959s, 11.73MB read
-Requests/sec:           17619.23
-Transfer/sec:           2.34MB
-Avg Req Time:           45.404923ms
-Fastest Request:        1.0023ms
-Slowest Request:        1.1947739s
+./go-wrk -c 80 -d 10  http://localhost:3000/user/1
+Running 10s test @ http://localhost:3000/user/1
+  80 goroutine(s) running concurrently
+166940 requests in 9.990184771s, 22.13MB read
+Requests/sec:           16710.40
+Transfer/sec:           2.22MB
+Avg Req Time:           4.787437ms
+Fastest Request:        2.9932ms
+Slowest Request:        52.0474ms
 Number of Errors:       0
 
 ```
@@ -54,16 +53,16 @@ Number of Errors:       0
 - freely use any middleware from express
 
 ```
-./go-wrk -c 800 -d 5  http://localhost:3000/users/1D
-
-12505 requests in 3.465680456s, 1.06MB read
-Requests/sec:           3608.24
-Transfer/sec:           313.61KB
-Avg Req Time:           221.714863ms
-Fastest Request:        4.9959ms
-Slowest Request:        2.6949984s
-Number of Errors:       782
-
+./go-wrk -c 80 -d 10  http://localhost:3000/user/1
+Running 10s test @ http://localhost:3000/user/1
+  80 goroutine(s) running concurrently
+159497 requests in 9.99361088s, 13.54MB read
+Requests/sec:           15959.90
+Transfer/sec:           1.35MB
+Avg Req Time:           5.012563ms
+Fastest Request:        0s
+Slowest Request:        43.0395ms
+Number of Errors:       0
 ```
 
 ## MICRO
@@ -75,16 +74,15 @@ Number of Errors:       782
 - Fast
 
 ```
-./go-wrk -c 800 -d 5  http://localhost:3000/user/1
-
-Running 5s test @ http://localhost:3000/user/1
-  800 goroutine(s) running concurrently
-75393 requests in 5.02029441s, 6.40MB read
-Requests/sec:           15017.65
-Transfer/sec:           1.27MB
-Avg Req Time:           53.270668ms
+./go-wrk -c 80 -d 10  http://localhost:3000/user/1
+Running 10s test @ http://localhost:3000/user/1
+  80 goroutine(s) running concurrently
+140558 requests in 9.995187596s, 11.93MB read
+Requests/sec:           14062.57
+Transfer/sec:           1.19MB
+Avg Req Time:           5.688861ms
 Fastest Request:        0s
-Slowest Request:        1.4349981s
+Slowest Request:        42.0381ms
 Number of Errors:       0
 ```
 
@@ -95,50 +93,34 @@ Number of Errors:       0
 - took the best from frameworks and combined them
 
 ```
-go-wrk -c 800 -d 5  http://localhost:3000/user/1
-Running 5s test @ http://localhost:3000/user/1
-  800 goroutine(s) running concurrently
-115951 requests in 5.011511577s, 13.49MB read
-Requests/sec:           23136.93
-Transfer/sec:           2.69MB
-Avg Req Time:           34.576754ms
-Fastest Request:        16.9988ms
-Slowest Request:        1.1615233s
+./go-wrk -c 80 -d 10  http://localhost:3000/user/1
+Running 10s test @ http://localhost:3000/user/1
+  80 goroutine(s) running concurrently
+192298 requests in 9.98925697s, 17.61MB read
+Requests/sec:           19250.48
+Transfer/sec:           1.76MB
+Avg Req Time:           4.15574ms
+Fastest Request:        2.0011ms
+Slowest Request:        1.0375677s
 Number of Errors:       0
 ```
 
 with turbo http
 
 ```
-go-wrk -c 800 -d 5  http://localhost:3000/user/1
-Running 5s test @ http://localhost:3000/user/1
-  800 goroutine(s) running concurrently
-115481 requests in 5.012806049s, 9.36MB read
-Requests/sec:           23037.20
-Transfer/sec:           1.87MB
-Avg Req Time:           34.726447ms
-Fastest Request:        3.9987ms
-Slowest Request:        2.2587918s
+./go-wrk -c 80 -d 10  http://localhost:3000/user/1
+Running 10s test @ http://localhost:3000/user/1
+  80 goroutine(s) running concurrently
+212024 requests in 9.986943981s, 11.93MB read
+Requests/sec:           21230.12
+Transfer/sec:           1.19MB
+Avg Req Time:           3.768231ms
+Fastest Request:        1.9924ms
+Slowest Request:        1.0296643s
 Number of Errors:       0
-
-
 ```
 
-35 sec test
 
-```
-go-wrk -c 800 -d 35  http://localhost:3000/user/1
-Running 35s test @ http://localhost:3000/user/1
-  800 goroutine(s) running concurrently
-1069198 requests in 35.006962452s, 86.67MB read
-Requests/sec:           30542.44
-Transfer/sec:           2.48MB
-Avg Req Time:           26.193062ms
-Fastest Request:        0s
-Slowest Request:        2.1793265s
-Number of Errors:       0
-
-```
 
 ## Fastify 1.13
 
@@ -147,15 +129,14 @@ Number of Errors:       0
 - Seems more advanced
 
 ```
-./go-wrk -c 800 -d 5  http://localhost:3000/user/1
-
-Running 5s test @ http://localhost:3000/user/1
-  800 goroutine(s) running concurrently
-57113 requests in 5.013785697s, 7.08MB read
-Requests/sec:           11391.19
-Transfer/sec:           1.41MB
-Avg Req Time:           70.229694ms
+./go-wrk -c 80 -d 10  http://localhost:3000/user/1
+Running 10s test @ http://localhost:3000/user/1
+  80 goroutine(s) running concurrently
+135186 requests in 9.995741128s, 16.76MB read
+Requests/sec:           13524.36
+Transfer/sec:           1.68MB
+Avg Req Time:           5.915252ms
 Fastest Request:        0s
-Slowest Request:        2.4833055s
-Number of Errors:       3
+Slowest Request:        1.0536042s
+Number of Errors:       0
 ```

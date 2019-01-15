@@ -38,22 +38,22 @@
 // custom middleware to attach the X-Response-Time header to the response
 // service.use((req, res, next) => {
 //     let now = new Date().getTime();
- 
+
 //     res.on('response', e => {
 //         e.res.setHeader('X-Response-Time', new Date().getTime() - now);
 //     });
- 
+
 //     return next();
 // });
 
 //turbo http
 
-const server = require('restana/libs/turbo-http');
-const service = require('restana')({
-    server
-});
+// const server = require('restana/libs/turbo-http');
+// const service = require('restana')({
+//     server
+// });
 
-// const service = require('restana')({})
+const service = require('restana')({})
 
 
 // some fake "star" handler
@@ -72,4 +72,4 @@ service.get('/user/:user/book/:book', async (req, res) => {
 });
 
 
-service.start(3000).then((server) => {});
+service.start(3000,'localhost').then((server) => {});

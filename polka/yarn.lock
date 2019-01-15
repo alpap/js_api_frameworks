@@ -4,27 +4,32 @@
 
 "@arr/every@^1.0.0":
   version "1.0.0"
-  resolved "https://proget.hesehus.dk/npm/npm/@arr/every/-/every-1.0.0.tgz#314f8168f50ae48a032cfdad5fdb436f464a97ac"
+  resolved "https://registry.yarnpkg.com/@arr/every/-/every-1.0.0.tgz#314f8168f50ae48a032cfdad5fdb436f464a97ac"
+  integrity sha1-MU+BaPUK5IoDLP2tX9tDb0ZKl6w=
 
 "@polka/url@^0.5.0":
   version "0.5.0"
-  resolved "https://proget.hesehus.dk/npm/npm/@polka/url/-/url-0.5.0.tgz#b21510597fd601e5d7c95008b76bf0d254ebfd31"
+  resolved "https://registry.yarnpkg.com/@polka/url/-/url-0.5.0.tgz#b21510597fd601e5d7c95008b76bf0d254ebfd31"
+  integrity sha512-oZLYFEAzUKyi3SKnXvj32ZCEGH6RDnao7COuCVhDydMS9NrCSVXhM79VaKyP5+Zc33m0QXEd2DN3UkU7OsHcfw==
 
 matchit@^1.0.0:
-  version "1.0.6"
-  resolved "https://proget.hesehus.dk/npm/npm/matchit/-/matchit-1.0.6.tgz#825da06468bd324f0219ebe28e12a41bfb5524c4"
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/matchit/-/matchit-1.0.7.tgz#6fec56cd0eee7dc11fb5624ed4cd70d40b2ac949"
+  integrity sha512-6GQP+4ukhBEL4pQPQlipd51XnpOlycit/3o6p4XhhZt2+9hc7JlHr7NuWbTLQ2MdSzcxR603L7LF4T8x1e1mXA==
   dependencies:
     "@arr/every" "^1.0.0"
 
 polka@^0.5.1:
   version "0.5.1"
-  resolved "https://proget.hesehus.dk/npm/npm/polka/-/polka-0.5.1.tgz#989a45b89a2ab9e3618f54b5720f37946a923891"
+  resolved "https://registry.yarnpkg.com/polka/-/polka-0.5.1.tgz#989a45b89a2ab9e3618f54b5720f37946a923891"
+  integrity sha512-de0VgqoAgGIJoa4mTj+e9KKIt5uRJOGyE37TbsoYEuDzI+cbJZ8nKBRCmiwv9DUMKrYhAMHW/di7/6/65zgZZQ==
   dependencies:
     "@polka/url" "^0.5.0"
     trouter "^2.0.1"
 
 trouter@^2.0.1:
   version "2.0.1"
-  resolved "https://proget.hesehus.dk/npm/npm/trouter/-/trouter-2.0.1.tgz#2726a5f8558e090d24c3a393f09eaab1df232df6"
+  resolved "https://registry.yarnpkg.com/trouter/-/trouter-2.0.1.tgz#2726a5f8558e090d24c3a393f09eaab1df232df6"
+  integrity sha512-kr8SKKw94OI+xTGOkfsvwZQ8mWoikZDd2n8XZHjJVZUARZT+4/VV6cacRS6CLsH9bNm+HFIPU1Zx4CnNnb4qlQ==
   dependencies:
     matchit "^1.0.0"
