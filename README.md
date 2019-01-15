@@ -88,12 +88,10 @@ Slowest Request:        1.4349981s
 Number of Errors:       0
 ```
 
-
-
 ## RESTANA
 
-- Very new 
-- express based 
+- Very new
+- express based
 - took the best from frameworks and combined them
 
 ```
@@ -140,4 +138,24 @@ Fastest Request:        0s
 Slowest Request:        2.1793265s
 Number of Errors:       0
 
+```
+
+## Fastify 1.13
+
+- Fast
+- 90+ pluggins
+- Seems more advanced
+
+```
+./go-wrk -c 800 -d 5  http://localhost:3000/user/1
+
+Running 5s test @ http://localhost:3000/user/1
+  800 goroutine(s) running concurrently
+57113 requests in 5.013785697s, 7.08MB read
+Requests/sec:           11391.19
+Transfer/sec:           1.41MB
+Avg Req Time:           70.229694ms
+Fastest Request:        0s
+Slowest Request:        2.4833055s
+Number of Errors:       3
 ```
